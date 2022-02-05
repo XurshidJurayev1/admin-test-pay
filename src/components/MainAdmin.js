@@ -5,11 +5,13 @@ const DefaultLayout = React.lazy(() => import('../layout/DefaultLayout'));
 const Login = React.lazy(() => import('../views/pages/login/Login'));
 
 const MainAdmin = (props) => {
-  console.log(props);
+  
+
+
   return (
     <div>
       {
-        props.admins.length > 0 ? <DefaultLayout />
+        props.admins.length > 0 ? <DefaultLayout   >{props.children}</DefaultLayout>
           :
           <Login />
       }
